@@ -21,11 +21,11 @@ function setup() {
     camera = createCapture(VIDEO)
     camera.hide()
     posenet = ml5.poseNet(camera, modelLoaded)
-    poseNet.on("pose", gotPoses)
+    posenet.on("pose", gotPoses)
 }
 
 function draw() {
-    image(video, 0,0,600,500)
+    image(camera, 0,0,600,500)
     song1Status = song1.isPlaying()
     song2Status = song2.isPlaying()
     fill("white")
